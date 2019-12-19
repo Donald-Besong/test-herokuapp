@@ -7,7 +7,7 @@ import sys
 
 file_dir = os.path.dirname(os.path.abspath(__file__))
 working_dir = os.getcwd()
-sys.path.append(working_dir)
+sys.path.append(working_dir + "\OTHER")
 
 print("Loading function ......")
 def lambda_handler(event, context):
@@ -44,8 +44,8 @@ if __name__ == "__main__":
     lambda_handler(event, context)
     
 bt = Button(label=other_code.x)
-doc=curdoc()
-doc.add_root(bt)
+#doc=curdoc()
+#doc.add_root(bt)
 
 #4. For Bokeh Server: Displaying the document using (note Microsft edge does not work well. Use Chrome)
 #on the command line, run "bokeh serve --show main.py"
