@@ -10,7 +10,7 @@ path_to_other = working_dir + "/OTHER/other_code.py"
 
 print("testing ....****************************************************************")
 print(path_to_other)
-other_code_local = imp.load_source('', path_to_other)
+other_code_local = imp.load_source('path_to_other', path_to_other)
 ##print(other_code_local.number().age)
 #
 #print("Loading function ......")
