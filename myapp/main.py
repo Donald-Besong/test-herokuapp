@@ -10,7 +10,7 @@ path_to_other = working_dir + "/OTHER/other_code.py"
 
 print("testing ....****************************************************************")
 print(path_to_other)
-#other_code_local = imp.load_source('', path_to_other)
+other_code_local = imp.load_source('', path_to_other)
 ##print(other_code_local.number().age)
 #
 #print("Loading function ......")
@@ -55,3 +55,5 @@ print(path_to_other)
 ##on the command line, run "bokeh serve --show main.py"
 #
 ##5, In heroku, debug with "heroku logs --tail --app test-herokuapp-instance"
+#better still, 
+#heroku restart --app test-herokuapp-instance & heroku logs --tail --app test-herokuapp-instance
