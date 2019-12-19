@@ -12,7 +12,7 @@ print("testing ....*************************************************************
 print(path_to_other)
 
 print("testing listdir....****************************************************************")
-arr = os.listdir(working_dir + "/OTHER")
+arr = os.listdir(working_dir + "myapp/OTHER")
 print(arr)
 #other_code_local = imp.load_source('path_to_other', path_to_other)
 ##print(other_code_local.number().age)
