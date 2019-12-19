@@ -7,7 +7,7 @@ import imp
 
 file_dir = os.path.dirname(os.path.abspath(__file__))
 working_dir = os.getcwd()
-path_to_other = working_dir + "\OTHER\other_code.py"
+path_to_other = working_dir + "/OTHER/other_code.py"
 other_code_local = imp.load_source('', path_to_other)
 #print(other_code_local.number().age)
 
