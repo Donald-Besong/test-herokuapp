@@ -9,10 +9,10 @@ working_dir = os.getcwd()
 path_to_other = working_dir + "/OTHER/other_code.py"
 
 print("testing ....****************************************************************")
-print(path_to_other)
+print(working_dir)
 
 print("testing listdir....****************************************************************")
-arr = os.listdir(working_dir + "myapp/OTHER")
+arr = os.listdir(working_dir + "/myapp/OTHER") #because of heroku, i have "/myapp/" here too
 print(arr)
 #other_code_local = imp.load_source('path_to_other', path_to_other)
 ##print(other_code_local.number().age)
