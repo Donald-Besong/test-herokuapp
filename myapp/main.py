@@ -1,22 +1,24 @@
 import json
-import other_code as other_code
 from bokeh.io import curdoc
 from bokeh.models import Button
 import os
 import sys
+import imp
 
 file_dir = os.path.dirname(os.path.abspath(__file__))
 working_dir = os.getcwd()
-sys.path.append(working_dir + "\OTHER")
+path_to_other = working_dir + "\OTHER\other_code.py"
+other_code_local = imp.load_source('', path_to_other)
+#print(other_code_local.number().age)
 
 print("Loading function ......")
 def lambda_handler(event, context):
     # TODO implement
-    number_obj = other_code.number("Donald")
+    number_obj = other_code_local.number("Donald")
     name = number_obj.name
     age = number_obj.age
     event_key1 = event['key1']
-    print(other_code.x)
+    print(other_code_local.x)
     print("value1 = " + event.get("key1"))
     print("hello there. This is a test")
     print("My name is = " + name)
@@ -46,8 +48,8 @@ if __name__ == "__main__":
 bt = Button(label=other_code.x)
 #doc=curdoc()
 #doc.add_root(bt)
-
-#4. For Bokeh Server: Displaying the document using (note Microsft edge does not work well. Use Chrome)
-#on the command line, run "bokeh serve --show main.py"
-
-#5, In heroku, debug with "heroku logs --tail --app test-herokuapp-instance"
+#
+##4. For Bokeh Server: Displaying the document using (note Microsft edge does not work well. Use Chrome)
+##on the command line, run "bokeh serve --show main.py"
+#
+##5, In heroku, debug with "heroku logs --tail --app test-herokuapp-instance"
