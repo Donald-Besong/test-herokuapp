@@ -1,5 +1,5 @@
 import json
-import OTHER.other_code as other_code
+import other_code as other_code
 from bokeh.io import curdoc
 from bokeh.models import Button
 import os
