@@ -9,7 +9,7 @@ file_dir = os.path.dirname(os.path.abspath(__file__))
 working_dir = os.getcwd()
 sys.path.append(working_dir)
 
-print("Loading function ...")
+print("Loading function ......")
 def lambda_handler(event, context):
     # TODO implement
     number_obj = other_code.number("Donald")
