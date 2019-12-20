@@ -6,7 +6,9 @@ import imp
 
 file_dir = os.path.dirname(os.path.abspath(__file__))
 working_dir = os.getcwd()
-path_to_other = working_dir + "/myapp/OTHER/other_code.py"
+path_to_other = working_dir + "/myapp/OTHER/other_code.py" #because of heroku, i have "/myapp/" here too
+#this is because in heroku, working_dir is simplt "app"
+#path_to_other = working_dir + "/OTHER/other_code.py" #use this when not using heroku
 
 print("testing ....****************************************************************")
 print(working_dir)
